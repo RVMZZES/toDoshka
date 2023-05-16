@@ -1,0 +1,112 @@
+@charset "UTF-8";
+html {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 30px;
+}
+html body {
+  color: rgba(166, 63, 246, 0.78);
+}
+html body .main {
+  display: flex;
+  align-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(177, 101, 212, 0.17);
+  border-radius: 8px;
+  padding: 1rem;
+}
+html body .main h1 {
+  margin: 0 auto;
+}
+html body .main .search {
+  border: 1px solid rgba(164, 61, 212, 0.2);
+  border-radius: 8px;
+  display: flex;
+  margin: 1rem auto;
+  padding: 2px;
+}
+html body .main .search .mainInp {
+  border: none;
+  border-right: 1px solid rgba(164, 61, 212, 0.2);
+  background: none;
+  min-width: 300px;
+  padding: 2px;
+  color: rgba(166, 63, 246, 0.9);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+}
+html body .main .search .mainInp:focus {
+  outline: none;
+  padding: 2px;
+  color: rgba(166, 63, 246, 0.9);
+  font-family: "Josefin Sans", sans-serif;
+}
+html body .main .search .mainInp::placeholder {
+  font-family: "Josefin Sans", sans-serif;
+  color: rgba(166, 63, 246, 0.5);
+  font-size: 0.8rem;
+}
+html body .main .search .addTask {
+  padding-top: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  background: none;
+  color: rgba(166, 63, 246, 0.78);
+  border: none;
+  font-size: 1rem;
+  font-family: "Josefin Sans", sans-serif;
+  cursor: url("/public/images/icons8-нажатие-левой-кнопки-мыши-25.png"), auto;
+}
+html body .main .search .addTask:disabled {
+  cursor: not-allowed;
+}
+html body .main .delAll {
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 4px;
+  border: 1px solid rgba(164, 61, 212, 0.2);
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 1rem auto;
+}
+html body .main .workSpace {
+  width: 100%;
+}
+
+.icons {
+  cursor: pointer;
+  padding: 2px;
+  width: 30px;
+  filter: invert(8%) sepia(84%) saturate(7499%) hue-rotate(289deg) brightness(92%) contrast(102%);
+}
+
+.task {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.inp {
+  border: 1px solid rgba(164, 61, 212, 0.2);
+  border-radius: 8px;
+  background: none;
+  min-width: 300px;
+  padding: 2px;
+  color: rgba(166, 63, 246, 0.9);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  margin: 0.2rem 0;
+}
+.inp:focus {
+  outline: none;
+  padding: 2px;
+  color: rgba(166, 63, 246, 0.9);
+  font-family: "Josefin Sans", sans-serif;
+}
+.inp::placeholder {
+  font-family: "Josefin Sans", sans-serif;
+  color: rgba(166, 63, 246, 0.5);
+  padding: 2px;
+}
+
+/*# sourceMappingURL=style.css.map */
