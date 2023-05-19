@@ -1,19 +1,20 @@
-@charset "UTF-8";
 html {
   font-family: "Josefin Sans", sans-serif;
   font-size: 30px;
 }
 html body {
-  color: rgba(166, 63, 246, 0.78);
+  color: rgb(166, 63, 246);
+  background: rgb(241, 219, 252);
 }
 html body .main {
   display: flex;
   align-content: space-around;
   align-items: center;
   flex-direction: column;
-  background: rgba(177, 101, 212, 0.17);
   border-radius: 8px;
   padding: 1rem;
+  transition: filter 0.3s ease-in-out;
+  filter: blur(0);
 }
 html body .main h1 {
   margin: 0 auto;
@@ -31,14 +32,14 @@ html body .main .search .mainInp {
   background: none;
   min-width: 300px;
   padding: 2px;
-  color: rgba(166, 63, 246, 0.9);
+  color: rgb(166, 63, 246);
   font-family: "Josefin Sans", sans-serif;
   font-size: 1rem;
 }
 html body .main .search .mainInp:focus {
   outline: none;
   padding: 2px;
-  color: rgba(166, 63, 246, 0.9);
+  color: rgb(166, 63, 246);
   font-family: "Josefin Sans", sans-serif;
 }
 html body .main .search .mainInp::placeholder {
@@ -51,11 +52,11 @@ html body .main .search .addTask {
   padding-left: 4px;
   padding-right: 4px;
   background: none;
-  color: rgba(166, 63, 246, 0.78);
+  color: rgb(166, 63, 246);
   border: none;
   font-size: 1rem;
   font-family: "Josefin Sans", sans-serif;
-  cursor: url("/public/images/icons8-нажатие-левой-кнопки-мыши-25.png"), auto;
+  cursor: url("../../images/click.png"), auto;
 }
 html body .main .search .addTask:disabled {
   cursor: not-allowed;
@@ -72,12 +73,15 @@ html body .main .delAll {
 html body .main .workSpace {
   width: 100%;
 }
+html body .main.show-blur {
+  filter: blur(5px);
+}
 
 .icons {
   cursor: pointer;
   padding: 2px;
   width: 30px;
-  filter: invert(8%) sepia(84%) saturate(7499%) hue-rotate(289deg) brightness(92%) contrast(102%);
+  filter: invert(35%) sepia(54%) saturate(5666%) hue-rotate(259deg) brightness(97%) contrast(98%);
 }
 
 .task {
@@ -90,9 +94,9 @@ html body .main .workSpace {
   border: 1px solid rgba(164, 61, 212, 0.2);
   border-radius: 8px;
   background: none;
-  min-width: 300px;
+  min-width: 600px;
   padding: 2px;
-  color: rgba(166, 63, 246, 0.9);
+  color: rgb(166, 63, 246);
   font-family: "Josefin Sans", sans-serif;
   font-size: 1rem;
   margin: 0.2rem 0;
@@ -100,13 +104,57 @@ html body .main .workSpace {
 .inp:focus {
   outline: none;
   padding: 2px;
-  color: rgba(166, 63, 246, 0.9);
+  color: rgb(166, 63, 246);
   font-family: "Josefin Sans", sans-serif;
 }
 .inp::placeholder {
   font-family: "Josefin Sans", sans-serif;
   color: rgba(166, 63, 246, 0.5);
   padding: 2px;
+}
+
+.dialog-window {
+  text-align: center;
+  background: rgb(241, 219, 252);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  box-shadow: 0 0 5px 1px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.dialog-window p {
+  margin: 0;
+}
+.dialog-window button {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 0.25rem;
+  width: 100px;
+  color: rgba(166, 63, 246, 0.5);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.7rem;
+  font-weight: bolder;
+  padding: 0.1rem;
+  border: 2px solid rgba(164, 61, 212, 0.2);
+  margin-top: 1rem;
+}
+.dialog-window button:hover {
+  color: rgb(166, 63, 246);
+  background: white;
+  cursor: pointer;
+}
+.dialog-window button:active {
+  box-shadow: 0 0 4px 1px rgba(166, 63, 246, 0.5), inset 0 0 2px 1px rgba(166, 63, 246, 0.5);
+  font-size: 0.5rem;
+}
+
+.dialog.visible {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
